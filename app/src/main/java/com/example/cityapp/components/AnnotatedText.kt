@@ -2,6 +2,7 @@ package com.example.cityapp.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -22,7 +23,7 @@ fun AnnotatedText(
             text = buildAnnotatedString {
                 this.append(text)
             },
-            modifier = Modifier.weight(1f)
+            modifier = Modifier.wrapContentWidth()
         )
         Text(
             text = buildAnnotatedString {
@@ -38,8 +39,7 @@ fun AnnotatedText(
             },
             modifier = Modifier.clickable {
                 onClick()
-            }
-                .weight(1f)
+            }.wrapContentWidth()
         )
     }
 }
