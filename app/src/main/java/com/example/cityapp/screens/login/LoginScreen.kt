@@ -1,6 +1,5 @@
 package com.example.cityapp.screens.login
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -12,22 +11,18 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.cityapp.R
+import com.example.cityapp.components.AnnotatedText
+import com.example.cityapp.ui.theme.PoppinsFamily
+import com.example.cityapp.ui.theme.UIScreen
 
 
 val ed = "Don't you have an account? "
@@ -36,7 +31,9 @@ val ed = "Don't you have an account? "
     showBackground = true,
 )
 @Composable
-fun LoginScreen(){
+fun LoginScreen(
+    navToSignUpPage: () -> Unit = {},
+){
     Column(
         modifier = Modifier.padding(
             16.dp,
@@ -46,23 +43,23 @@ fun LoginScreen(){
            text = "Sign in",
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(),
+                .padding(
+                    top = 30.dp,
+                ),
             textAlign = TextAlign.Start,
+            style = UIScreen.titleLarge
         )
 
         Spacer(modifier =
-        Modifier.size(30.dp)
+        Modifier.size(60.dp)
         )
 
         Text(text = "Email or phone number")
-        TextField(
+        OutlinedTextField(
             value = "",
             onValueChange ={},
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(
-                    horizontal = 16.dp,
-                ),
+                .fillMaxWidth(),
             shape = RoundedCornerShape(size = 10.dp)
         )
 
@@ -77,14 +74,13 @@ fun LoginScreen(){
 //          ),
 //            contentDescription = ""
 //        )
-        TextField(
+
+
+        OutlinedTextField(
             value = "",
             onValueChange ={},
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(
-                    horizontal = 16.dp,
-                ),
+                .fillMaxWidth(),
             shape = RoundedCornerShape(size = 10.dp)
         )
 
@@ -123,33 +119,14 @@ fun LoginScreen(){
         Modifier.size(50.dp)
         )
 
-//        Text(
-//            text = "Don't you have an account?",
-//            = buildAnnotatedString {  }
-//        )
-        Row() {
-            Text(
-                text = buildAnnotatedString {
-                    this.append(ed)
-                },
-                )
-            Text(
-                text = buildAnnotatedString {
-                    this.addStyle(
-                        style = SpanStyle(
-                            color = Color.Black,
-                            fontWeight = FontWeight.Bold
-                        ),
-                        start = 0,
-                        end = "Sign up".length,
-                    )
-                    this.append("Sign up")
-                },
-                modifier = Modifier.clickable {
+        AnnotatedText(
+            text = ed,
+            highlightedText = "Sign Up",
+            onClick = navToSignUpPage
+        )
 
-                }
-                )
-        }
-
+        Spacer(modifier =
+        Modifier.size(20.dp)
+        )
     }
 }
