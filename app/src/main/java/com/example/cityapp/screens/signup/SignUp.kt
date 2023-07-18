@@ -81,7 +81,7 @@ Column(
     )
 
     OutlinedButton(
-        onClick = { /*TODO*/ },
+        onClick = {  },
         shape = RoundedCornerShape(30.dp),
     ) {
         Text(
