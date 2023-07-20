@@ -21,7 +21,9 @@ import com.example.cityapp.ui.theme.UIScreen
     showBackground = true
 )
 @Composable
-fun SignUp(){
+fun SignUp(
+    navigateToLoginScreen: () -> Unit = {},
+){
 Column(
     modifier = Modifier.padding(
         16.dp
@@ -34,11 +36,11 @@ Column(
     AnnotatedText(
         text = "Already have an account?",
         highlightedText = " Log in",
-        onClick = {}
+        onClick = navigateToLoginScreen
     )
 
     Spacer(
-        modifier = Modifier.size(20.dp)
+        modifier = Modifier.size(50.dp)
     )
 
     Text(
@@ -51,7 +53,7 @@ Column(
     )
 
     Spacer(
-        modifier = Modifier.size(20.dp)
+        modifier = Modifier.size(30.dp)
     )
     Text(
         text = "Email address",
@@ -63,7 +65,7 @@ Column(
     )
 
     Spacer(
-        modifier = Modifier.size(20.dp)
+        modifier = Modifier.size(30.dp)
     )
 
     Text(
@@ -77,7 +79,7 @@ Column(
     Text(text = "Use 8 or more chacterers with a mix of letters.")
 
     Spacer(
-        modifier = Modifier.size(20.dp)
+        modifier = Modifier.size(30.dp)
     )
 
     OutlinedButton(

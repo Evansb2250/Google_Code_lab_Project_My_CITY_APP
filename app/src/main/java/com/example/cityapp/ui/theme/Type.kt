@@ -44,7 +44,7 @@ val UIScreen = Typography(
     titleLarge = TextStyle(
         fontFamily = PoppinsFamily,
         fontWeight = FontWeight.Bold,
-        fontSize = 34.sp,
+        fontSize = 28.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
     )

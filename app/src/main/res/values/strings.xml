@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">CityApp</string>
+
+
+    <!-- Screen names -->
+    <string name="Login">Login</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="HomeScreen">Home</string>
+    <string name="Restaurant">Restaurant</string>
+    <string name="Cafe">Cafe</string>
+    <string name="Shopping">Malls</string>
+    <string name="Fitness">Gyms</string>
+    <string name="Parks">Parks</string>
+    <string name="adventure">Adventure</string>
+
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+
+    <string name="catalog">Catalog</string>
+    <string name="bookMarkScreen">BookMarks</string>
 </resources>

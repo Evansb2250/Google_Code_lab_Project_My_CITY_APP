@@ -33,6 +33,7 @@ val ed = "Don't you have an account? "
 @Composable
 fun LoginScreen(
     navToSignUpPage: () -> Unit = {},
+    navToLoginScreen: () -> Unit = {},
 ){
     Column(
         modifier = Modifier.padding(
@@ -89,7 +90,7 @@ fun LoginScreen(
         )
 
         OutlinedButton(
-            onClick = { /*TODO*/ },
+            onClick = { navToLoginScreen() },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(
