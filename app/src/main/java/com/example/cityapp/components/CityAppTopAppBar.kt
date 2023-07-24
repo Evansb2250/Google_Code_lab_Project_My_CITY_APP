@@ -14,6 +14,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Divider
 import androidx.compose.material3.DividerDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -42,12 +43,6 @@ fun CityAppTopAppBar(
             modifier = Modifier
                 .padding(16.dp)
         ) {
-            Text(
-                text = "City App",
-                textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth(),
-                style = UIScreen.titleLarge,
-            )
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -67,31 +62,49 @@ fun CityAppTopAppBar(
                         .height(
                             38.dp
                         ),
-                    shape = RoundedCornerShape(10.dp)
+                    shape = RoundedCornerShape(10.dp),
+                    trailingIcon = {
+                        IconButton(onClick = { /*TODO*/ }) {
+                            Icon(
+                                painter = painterResource(
+                                    id = R.drawable.filter_icon,
+                                ),
+                                contentDescription = "",
+                                modifier = Modifier.border(
+                                    border = BorderStroke(
+                                        1.dp,
+                                        color = Color.Black
+                                    ),
+                                    shape = RoundedCornerShape(5.dp)
+                                )
+
+                            )
+                        }
+                    }
                 )
 
-                IconButton(
-                    modifier = Modifier
-                        .padding(
-                            start = 8.dp,
-                        )
-                        .border(
-                            border = BorderStroke(
-                                width = 1.dp,
-                                color = Color.Black
-                            ),
-                            shape = RoundedCornerShape(10.dp)
-                        ),
-                    onClick = { },
-                ) {
-                    Image(
-                        painter = painterResource(
-                            id = R.drawable.filter_icon,
-                        ),
-                        contentScale = ContentScale.Crop,
-                        contentDescription = "",
-                    )
-                }
+//                IconButton(
+//                    modifier = Modifier
+//                        .padding(
+//                            start = 8.dp,
+//                        )
+//                        .border(
+//                            border = BorderStroke(
+//                                width = 1.dp,
+//                                color = Color.Black
+//                            ),
+//                            shape = RoundedCornerShape(10.dp)
+//                        ),
+//                    onClick = { },
+//                ) {
+//                    Image(
+//                        painter = painterResource(
+//                            id = R.drawable.filter_icon,
+//                        ),
+//                        contentScale = ContentScale.Crop,
+//                        contentDescription = "",
+//                    )
+//                }
             }
         }
         Divider(

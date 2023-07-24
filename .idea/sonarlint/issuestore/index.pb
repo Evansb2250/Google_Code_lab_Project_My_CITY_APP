@@ -17,8 +17,6 @@ w
 Gapp/src/androidTest/java/com/example/cityapp/ExampleInstrumentedTest.kt,9\6\9626697c8712336813351ab99d7546f33b08d1ec
 h
 8app/src/test/java/com/example/cityapp/ExampleUnitTest.kt,0\6\061963501004309170ac866c65afb7a86095e32e
-l
-<app/src/main/java/com/example/cityapp/screens/placeHolder.kt,b\3\b3b006a6b199ee97dc388ba23992bef688637a77
 ;
 gradlew.bat,2\a\2a45a911a8f1836b0b6c5b758962572012d8f8c3
 \
@@ -32,5 +30,5 @@ l
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 g
 7app/src/main/java/com/example/cityapp/ui/theme/Theme.kt,f\c\fc4e1681f95bf7b0150f5760423202a92293a34c
-q
-Aapp/src/main/java/com/example/cityapp/components/AnnotatedText.kt,4\b\4b766aab129e0a6c8ed9cc385c076d0e73ec5bad
+f
+6app/src/main/java/com/example/cityapp/ui/theme/Type.kt,2\c\2c69ac8e0a72bcfe2c80471325129cf90d015357

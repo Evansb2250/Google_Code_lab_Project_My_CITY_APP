@@ -6,9 +6,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.cityapp.navigation.routes.Screen
-import com.example.cityapp.screens.home.HomeScreenLayout
-import com.example.cityapp.screens.login.LoginScreen
-import com.example.cityapp.screens.signup.SignUp
+import com.example.cityapp.ui.theme.screens.HomeScreenLayout
+import com.example.cityapp.ui.theme.screens.login.LoginScreen
+import com.example.cityapp.ui.theme.screens.signup.SignUp
 
 @Composable
 fun AppStartUpNavigation(
