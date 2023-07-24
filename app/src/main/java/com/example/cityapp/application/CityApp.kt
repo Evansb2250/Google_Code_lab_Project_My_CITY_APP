@@ -1,4 +1,7 @@
 package com.example.cityapp.application
 
-class CityApp {
+import android.app.Application
+
+class CityApp: Application() {
+
 }
