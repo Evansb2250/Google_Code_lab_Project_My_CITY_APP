@@ -1,13 +1,15 @@
 package com.example.cityapp.data
 
 import com.example.cityapp.R
-import com.example.cityapp.model.CultureHeader
-import com.example.cityapp.model.EventHeader
-import com.example.cityapp.model.HistoryHeader
-import com.example.cityapp.model.HomeScreenHeaders.CUlTURE
-import com.example.cityapp.model.HomeScreenHeaders.EVENTS
-import com.example.cityapp.model.HomeScreenHeaders.History
-import com.example.cityapp.model.MedellinEvents
+import com.example.cityapp.domain.ColombianCulture
+import com.example.cityapp.domain.CultureHeader
+import com.example.cityapp.domain.EventHeader
+import com.example.cityapp.domain.HistoryHeader
+import com.example.cityapp.domain.HomeScreenHeaders.CUlTURE
+import com.example.cityapp.domain.HomeScreenHeaders.EVENTS
+import com.example.cityapp.domain.HomeScreenHeaders.History
+import com.example.cityapp.domain.MedellinEvents
+import com.example.cityapp.domain.MedellinHistory
 
 object DataSource {
     val listOfHeaders = listOf(

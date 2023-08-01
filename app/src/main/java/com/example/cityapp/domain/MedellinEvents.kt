@@ -1,4 +1,4 @@
-package com.example.cityapp.model
+package com.example.cityapp.domain
 
 interface ListViewItems {
     val name: String

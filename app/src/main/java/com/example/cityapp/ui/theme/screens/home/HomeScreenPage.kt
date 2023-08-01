@@ -17,8 +17,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.example.cityapp.model.HomeScreenUIElements
-import com.example.cityapp.model.HomeScreenUIState
+import com.example.cityapp.domain.HomeScreenUIElements
+import com.example.cityapp.domain.HomeScreenUIState
 import com.example.cityapp.ui.theme.pxt16
 import com.example.cityapp.ui.theme.pxt32
 

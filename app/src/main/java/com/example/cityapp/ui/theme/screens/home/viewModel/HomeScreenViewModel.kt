@@ -2,8 +2,8 @@ package com.example.cityapp.ui.theme.screens.home.viewModel
 
 import androidx.lifecycle.ViewModel
 import com.example.cityapp.data.DataSource
-import com.example.cityapp.model.HomeScreenHeaders
-import com.example.cityapp.model.HomeScreenUIState
+import com.example.cityapp.domain.HomeScreenHeaders
+import com.example.cityapp.domain.HomeScreenUIState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

@@ -1,4 +1,4 @@
-package com.example.cityapp.model
+package com.example.cityapp.domain
 
 import androidx.annotation.DrawableRes
 
