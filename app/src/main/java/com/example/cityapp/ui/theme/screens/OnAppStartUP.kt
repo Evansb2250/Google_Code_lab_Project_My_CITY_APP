@@ -22,19 +22,10 @@ val sidePadding = 16.dp
 @Composable
 fun onAppStartUP() {
     val navController = rememberNavController()
-    val backStack = navController.currentBackStackEntryAsState()
 
-    Scaffold(
-        topBar = {
-            val destination = backStack.value?.destination?.route ?: Screen.Login.route
-            if (destination != Screen.Login.route && destination != Screen.SignUp.route) {
-                CityAppTopAppBar()
-            }
-        },
-    ) { innerPadding ->
-        AppStartUpNavigation(
-            navController = navController,
-            modifier = Modifier.padding(innerPadding)
-        )
-    }
+    AppStartUpNavigation(
+        navController = navController,
+    )
+
+
 }

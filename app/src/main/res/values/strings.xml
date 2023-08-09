@@ -18,4 +18,8 @@
 
     <string name="catalog">Catalog</string>
     <string name="bookMarkScreen">BookMarks</string>
+
+
+    <!-- webServerId -->
+    <string name="web_client_id">251485543595-fjml558u5cj4mektfv7g7o0ldhapku4s.apps.googleusercontent.com</string>
 </resources>
