@@ -1,7 +1,12 @@
 package com.example.cityapp.application
 
+import android.content.Context
+
 //need to create an interface
 interface ApplicationContainer{
-    //add repository
+
+}
+
+class DefaultApplicationContainer(val context: Context): ApplicationContainer{
 
 }

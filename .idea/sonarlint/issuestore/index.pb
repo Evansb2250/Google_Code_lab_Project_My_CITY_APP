@@ -26,8 +26,6 @@ m
 =app/src/main/java/com/example/cityapp/components/ImageCard.kt,b\0\b022bafb8afa50458ad650ed7ad6afba3f33954f
 X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
-y
-Iapp/src/main/java/com/example/cityapp/application/ApplicationContainer.kt,8\b\8ba922f3c277906f058b32726ee3d8e688e5b63f
 p
 @app/src/main/java/com/example/cityapp/domain/ColombianCulture.kt,a\e\ae499348c5e1cc6c150a6b36c94fd43d4e9990c4
 f
@@ -48,9 +46,5 @@ n
 >app/src/main/java/com/example/cityapp/domain/MedellinEvents.kt,7\e\7e671ca910c0ea8c39d39c695736806c9283c0cf
 o
 ?app/src/main/java/com/example/cityapp/domain/MedellinHistory.kt,e\5\e55e7d6f4997747096554f0cfaba0a20400a2a32
-i
-9app/src/main/java/com/example/cityapp/ProjectBreakDown.kt,8\1\81ea7e56c76186c14a2f5c7ae816c605a48718bc
 ƒ
 Sapp/src/main/java/com/example/cityapp/ui/theme/screens/splashScreen/SplashScreen.kt,8\5\85cf01b5fcf7afe732e81a58b5480ebc105e5ae3
-l
-<app/src/main/java/com/example/cityapp/application/CityApp.kt,0\e\0e2079ec3f07575e4002cd6a5d7c60d8d2818e23

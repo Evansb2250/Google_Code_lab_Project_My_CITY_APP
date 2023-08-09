@@ -15,22 +15,20 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
+import com.example.cityapp.ApplicationViewModelProvider
 import com.example.cityapp.components.CityAppTopAppBar
 import com.example.cityapp.navigation.routes.Screen
 import com.example.cityapp.presentation.GoogleAuthUiClient
 import com.example.cityapp.ui.theme.screens.HomeScreenLayout
-import com.example.cityapp.ui.theme.screens.login.LoginScreen
 import com.example.cityapp.ui.theme.screens.signup.SignUp
 import com.example.cityapp.ui.theme.signin.SignInScreen
 import com.example.cityapp.ui.theme.signin.SignInViewModel
 import com.google.android.gms.auth.api.identity.Identity
-import com.google.firebase.FirebaseApp
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
@@ -42,13 +40,6 @@ fun AppStartUpNavigation(
 
     val backStack = navController.currentBackStackEntryAsState()
     val applicationContext = LocalContext.current.applicationContext
-
-    val googleAuthUiClient by lazy {
-        GoogleAuthUiClient(
-            context = applicationContext,
-            oneTapClient = Identity.getSignInClient(applicationContext)
-        )
-    }
 
     Scaffold(
         topBar = {
@@ -69,13 +60,13 @@ fun AppStartUpNavigation(
             ) {
 
 
-                val viewModel = viewModel<SignInViewModel>()
+                val viewModel = viewModel<SignInViewModel>(factory = ApplicationViewModelProvider.Factor)
                 val state by viewModel.state.collectAsStateWithLifecycle()
                 val scope = rememberCoroutineScope()
 
 
                 LaunchedEffect(key1 = Unit) {
-                    if(googleAuthUiClient.getSignedInUser() != null) {
+                    if( viewModel.googleAuthUiClient.getSignedInUser() != null) {
                         navController.navigate( Screen.HomeScreenLayout.route)
                     }
                 }
@@ -87,7 +78,7 @@ fun AppStartUpNavigation(
                     onResult = { result ->
                         if(result.resultCode == ComponentActivity.RESULT_OK) {
                             scope.launch {
-                                val signInResult = googleAuthUiClient.signInWithIntent(
+                                val signInResult =  viewModel.googleAuthUiClient.signInWithIntent(
                                     intent = result.data ?: return@launch
                                 )
                                 viewModel.onSignInResult(signInResult)
@@ -113,7 +104,7 @@ fun AppStartUpNavigation(
                     state = state,
                     onSignInClick = {
                         GlobalScope.launch {
-                            val signInIntentSender = googleAuthUiClient.signIn()
+                            val signInIntentSender =  viewModel.googleAuthUiClient.signIn()
                             launcher.launch(
                                 IntentSenderRequest.Builder(
                                     signInIntentSender ?: return@launch
