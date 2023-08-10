@@ -10,7 +10,7 @@ import com.example.cityapp.ui.theme.signin.SignInViewModel
 object ApplicationViewModelProvider {
     val Factor = viewModelFactory {
         initializer {
-            SignInViewModel(cityAppApplication().applicationContext)
+            SignInViewModel(cityAppApplication().container.userRepository)
         }
     }
 }

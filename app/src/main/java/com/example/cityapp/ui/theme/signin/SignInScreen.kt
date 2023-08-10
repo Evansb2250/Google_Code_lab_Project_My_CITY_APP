@@ -19,15 +19,6 @@ fun SignInScreen(
     onSignInClick: () -> Unit,
 ){
     val context = LocalContext.current
-    LaunchedEffect(key1 = state.signInError){
-        state.signInError?.let{ error ->
-            Toast.makeText(
-                context,
-                error,
-                Toast.LENGTH_LONG
-            ).show()
-        }
-    }
 
     Box(
         modifier = Modifier

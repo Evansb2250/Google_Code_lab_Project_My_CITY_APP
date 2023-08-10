@@ -1,4 +1,4 @@
-package com.example.cityapp.presentation
+package com.example.cityapp.data
 
 import android.content.Context
 import android.content.Intent
@@ -14,7 +14,6 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.tasks.await
-import java.lang.Exception
 import java.util.concurrent.CancellationException
 
 class GoogleAuthUiClient(
